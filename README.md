@@ -1,6 +1,6 @@
-# Project-WebServer-milestone-2
+# Project-WebServer-milestone-3
 
-- Patient Data REST API (CRUD operations implemented)
+- Patient Data REST API
 
 ## Getting Started
 
