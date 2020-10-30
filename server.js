@@ -1,6 +1,8 @@
 const express = require('express');
+const path = require('path');
 const dotenv = require('dotenv');
 const colors = require('colors');
+const fileupload = require('express-fileupload');
 const connectDB = require('./config/db');
 
 // Load env variables
@@ -12,6 +14,7 @@ connectDB();
 // Route files
 const patients = require('./routes/patients');
 const records = require('./routes/records');
+const Patient = require('./models/Patient');
 
 const app = express();
 
@@ -25,6 +28,12 @@ const logger = (req, res, next) => {
 };
 
 app.use(logger);
+
+// File uploading
+app.use(fileupload());
+
+// Set static folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Mount routers
 app.use('/patients', patients);
