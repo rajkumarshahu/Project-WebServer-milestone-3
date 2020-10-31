@@ -15,7 +15,7 @@ exports.getRecords = asyncHandler(async (req, res, next) => {
 	} else {
 		query = Record.find().populate({
             path: 'patient',
-            select: 'name diagnosis description'
+            select: 'title diagnosis description'
         });
     }
 
@@ -35,7 +35,7 @@ exports.getRecords = asyncHandler(async (req, res, next) => {
 exports.getRecord = asyncHandler(async (req, res, next) => {
     const record = await Record.findById(req.params.id).populate({
         path: 'patient',
-        select: 'name diagnosis description'
+        select: 'title diagnosis description'
     });
 
     if (!record){

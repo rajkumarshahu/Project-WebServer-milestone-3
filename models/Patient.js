@@ -48,8 +48,25 @@ const PatientSchema = new mongoose.Schema({
     isCritical: {
         type: Boolean,
         default: true
-
-    }
+    },
+    bodyTemperature: {
+        type: String
+    },
+    pulseRate: {
+        type: String
+    },
+    respiration: {
+        type: String
+    },
+    systolicBP: {
+        type: String
+    },
+    diastolicBP: {
+        type: String
+    },
+    o2sat: {
+        type: String
+    },
 },
 {
     toJSON: { virtuals: true },
