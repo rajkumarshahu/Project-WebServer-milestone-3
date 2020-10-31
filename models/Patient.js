@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const PatientSchema = new mongoose.Schema({
-    name: {
+    title: {
         type: String,
         required: [true, 'Please add a name'],
         trim: true,
@@ -44,6 +44,11 @@ const PatientSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now
+    },
+    isCritical: {
+        type: Boolean,
+        default: true
+
     }
 },
 {
