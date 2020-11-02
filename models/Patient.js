@@ -9,32 +9,32 @@ const PatientSchema = new mongoose.Schema({
     },
     age:{
         type: Number,
-        required: [true, 'Please add age']
+        required: [false, 'Please add age']
     },
 
     phone: {
         type: String,
         maxlength: [20, 'Phone number can not be longer than 20 characters'],
     },
-    // email: {
-    //     type: String,
-    //     unique: true,
-    //     match: [
-    //         /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-    //         'Please add a valid email',
-    //     ],
-    // },
+    email: {
+        type: String,
+        unique: true,
+        match: [
+            /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+            'Please add a valid email',
+        ],
+    },
     address: {
         type: String,
-        required: [true, 'Please add an address'],
+        required: [false, 'Please add an address'],
     },
     diagnosis: {
         type: String,
-        required: [true, 'Please add diagnosis'],
+        required: [false, 'Please add diagnosis'],
     },
     description: {
         type: String,
-        required: [true, 'Please add a description'],
+        required: [false, 'Please add a description'],
         maxlength: [500, 'Description can not be more than 500 characters'],
     },
     photo: {
@@ -48,24 +48,6 @@ const PatientSchema = new mongoose.Schema({
     isCritical: {
         type: Boolean,
         default: true
-    },
-    bodyTemperature: {
-        type: String
-    },
-    pulseRate: {
-        type: String
-    },
-    respiration: {
-        type: String
-    },
-    systolicBP: {
-        type: String
-    },
-    diastolicBP: {
-        type: String
-    },
-    o2sat: {
-        type: String
     },
 },
 {

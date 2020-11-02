@@ -37,6 +37,7 @@ exports.getPatient = async (req, res, next) => {
 //@access      Private
 exports.createpatient = async (req, res, next) => {
 	try {
+		console.log(req.body);
 		const patient = await Patient.create(req.body);
 		res.status(201).json({
 			success: true,
