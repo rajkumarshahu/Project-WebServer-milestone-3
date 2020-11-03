@@ -70,14 +70,18 @@ exports.updatePatient = async (req, res, next) => {
 //@route       DELETE /patients/:id
 //@access      Private
 exports.deletePatient = asyncHandler(async (req, res, next) => {
-	const patient = await Patient.findById(req.params.id);
-	if (!patient) {
-		return next(
-			new ErrorResponse(`Patient not found with id of ${req.params.id}`, 404)
-		);
+	try {
+		const patient = await Patient.findById(req.params.id);
+		if (!patient) {
+			return next(
+				new ErrorResponse(`Patient not found with id of ${req.params.id}`, 404)
+			);
+		}
+		patient.remove();
+		res.status(200).json({ success: true, data: {} });
+	} catch (err) {
+		res.status(400).json({ success: false });
 	}
-	patient.remove();
-	res.status(400).json({ success: true, data: {} });
 });
 
 // @desc    Upload photo of a patient
@@ -91,7 +95,6 @@ exports.patientPhotoUpload = asyncHandler(async (req, res, next) => {
 			new ErrorResponse(`Patient not found with id of ${req.params.id}`, 404)
 		);
 	}
-
 
 	if (!req.files) {
 		return next(new ErrorResponse(`Please upload a file`, 400));
@@ -123,7 +126,9 @@ exports.patientPhotoUpload = asyncHandler(async (req, res, next) => {
 			return next(new ErrorResponse(`Problem with file upload`, 500));
 		}
 
-		const patient = await Patient.findByIdAndUpdate(req.params.id, { photo: file.name });
+		const patient = await Patient.findByIdAndUpdate(req.params.id, {
+			photo: file.name,
+		});
 
 		res.status(200).json({
 			success: true,
@@ -131,5 +136,5 @@ exports.patientPhotoUpload = asyncHandler(async (req, res, next) => {
 		});
 	});
 
-	console.log(req.files.file)
+	console.log(req.files.file);
 });

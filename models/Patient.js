@@ -47,7 +47,7 @@ const PatientSchema = new mongoose.Schema({
     },
     isCritical: {
         type: Boolean,
-        default: true
+        default: false
     },
 },
 {
