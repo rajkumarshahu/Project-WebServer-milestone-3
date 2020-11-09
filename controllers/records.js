@@ -56,6 +56,9 @@ exports.getRecord = asyncHandler(async (req, res, next) => {
 exports.createRecord = asyncHandler(async (req, res, next) => {
     req.body.patient = req.params.patientId;
 
+    console.log('add record');
+    console.log(req.body);
+
     const patient = await Patient.findById(req.params.patientId);
 
     if (!patient){
@@ -78,6 +81,8 @@ exports.createRecord = asyncHandler(async (req, res, next) => {
 //@access      Private
 exports.updateRecord = async (req, res, next) => {
     try {
+        console.log('update record');
+        console.log(req.body);
         const record = await Record.findByIdAndUpdate(req.params.id, req.body, {
             new: true,
             runValidators: true

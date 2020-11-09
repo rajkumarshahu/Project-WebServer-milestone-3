@@ -53,6 +53,7 @@ exports.createpatient = async (req, res, next) => {
 //@access      Private
 exports.updatePatient = async (req, res, next) => {
 	try {
+		console.log(req.body);
 		const patient = await Patient.findByIdAndUpdate(req.params.id, req.body, {
 			new: true,
 			runValidators: true,
