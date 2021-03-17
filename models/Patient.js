@@ -37,9 +37,9 @@ const PatientSchema = new mongoose.Schema({
         required: [false, 'Please add a description'],
         maxlength: [500, 'Description can not be more than 500 characters'],
     },
-    photo: {
+    imageUrl: {
         type: String,
-        default: 'no-photo.jpg'
+        default: 'https://cdn-ds.com/noimage/noimage.jpg'
     },bodyTemperature: {
         type: Number,
         required: [false, 'Please add Body Temperature']
