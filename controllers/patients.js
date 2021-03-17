@@ -8,7 +8,8 @@ const asyncHandler = require('../middleware/async');
 //@access      Public
 exports.getPatients = async (req, res, next) => {
 	try {
-		const patients = await Patient.find().populate('records');
+		const patients = await Patient.find()
+		//.populate('records');
 		res
 			.status(200)
 			.json({ success: true, patientCount: patients.length, data: patients });

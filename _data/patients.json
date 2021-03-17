@@ -8,7 +8,13 @@
 		"email": "johndoe@gmail.com",
         "address": "233 Bay Street Toronto Ontario M4Y 1GX",
         "diagnosis": "Aortic Aneurysm",
-        "description": "Needs attention!!!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, odo consequat."
+        "description": "Needs attention!!!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, odo consequat.",
+        "bodyTemperature": 37,
+        "pulseRate": 67,
+        "respirationRate": 18,
+		"systolicBP": 100,
+        "diastolicBP": 140,
+        "o2Sat": 92
     },
     {
         "_id": "5d725a037b292f5f8ceff787",
@@ -19,7 +25,13 @@
 		"email": "janesmith@gmail.com",
         "address": "240 Bloor St Toronto Ontario M4Y 1GX",
         "diagnosis": "Arthritis",
-        "description": "Severe joint pain !!!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "description": "Severe joint pain !!!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "bodyTemperature": 38,
+        "pulseRate": 79,
+        "respirationRate": 22,
+		"systolicBP": 120,
+        "diastolicBP": 128,
+        "o2Sat": 90
     },
     {
         "_id": "5d713a66ec8f2b88b8f830b8",
@@ -30,7 +42,13 @@
 		"email": "ollihampton@gmail.com",
         "address": "250 Wellesley Street East Toronto Ontario M4Y 1GX",
         "diagnosis": "Venous thromboembolism (VTE)",
-        "description": "Clots developed in the lower leg!!!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "description": "Clots developed in the lower leg!!!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "bodyTemperature": 36,
+        "pulseRate": 88,
+        "respirationRate": 24,
+		"systolicBP": 98,
+        "diastolicBP": 150,
+        "o2Sat": 92
     },
     {
         "_id": "5d713995b721c3bb38c1f5d0",
@@ -41,7 +59,13 @@
 		"email": "emre@gmail.com",
         "address": "2 Grosvenor Street Toronto Ontario M4Y 1GX",
         "diagnosis": "Alzheimer's Disease",
-        "description": "Mild memory loss!!!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "description": "Mild memory loss!!!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "bodyTemperature": 34,
+        "pulseRate": 89,
+        "respirationRate": 16,
+		"systolicBP": 80,
+        "diastolicBP": 120,
+        "o2Sat": 88
     },
     {
         "_id": "5d713995b721c3bb38c1f5d9",
@@ -52,6 +76,12 @@
 		"email": "laurie@gmail.com",
         "address": "350 Parliament Street Toronto Ontario M4Y 1GX",
         "diagnosis": "E.coli infection",
-        "description": "Severe stomach cramps, diarrhea (often bloody), and vomiting.!!!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "description": "Severe stomach cramps, diarrhea (often bloody), and vomiting.!!!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "bodyTemperature": 34,
+        "pulseRate": 89,
+        "respirationRate": 16,
+		"systolicBP": 80,
+        "diastolicBP": 120,
+        "o2Sat": 88
     }
 ]

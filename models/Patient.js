@@ -40,6 +40,31 @@ const PatientSchema = new mongoose.Schema({
     photo: {
         type: String,
         default: 'no-photo.jpg'
+    },bodyTemperature: {
+        type: Number,
+        required: [false, 'Please add Body Temperature']
+    },
+    pulseRate:{
+        type: Number,
+        required: [false, 'Please add pulse rate']
+    },
+
+    respirationRate: {
+        type: Number,
+        required: [false, 'Please add respiration rate']
+    },
+    systolicBP:{
+        type: Number,
+        required: [false, 'Please add systolic bp']
+    },
+    diastolicBP:{
+        type: Number,
+        required: [false, 'Please add diastolic bp']
+    },
+
+    o2Sat: {
+        type: Number,
+        required: [false, 'Please add oxygen saturation']
     },
     createdAt: {
         type: Date,
